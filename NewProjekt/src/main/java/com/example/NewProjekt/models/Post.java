@@ -53,4 +53,13 @@ public class Post {
     public void setViews(int views) {
         this.views = views;
     }
+
+    public Post() {
+    }
+
+    public Post(String first_name, String last_name, String annotation) {
+        this.first_name = first_name;
+        Last_name = last_name;
+        this.annotation = annotation;
+    }
 }

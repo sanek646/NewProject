@@ -13,7 +13,7 @@
     <div th:each="el : ${posts}" class="alert alert-info mt-2">
         <h3 th:text="${el.first_name}"/>
         <p th:text="${el.last_name}"/>
-        <a th:href="'/blog/'${el.id}">detall</a>
+        <a th:href="'/blog/'+ ${el.id}">detall</a>
     </div>
 </div>
 <div th:insert="blocks/footer ::footer"></div>
