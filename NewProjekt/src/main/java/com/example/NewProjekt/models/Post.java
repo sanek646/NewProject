@@ -10,9 +10,19 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    private String first_name, Last_name, annotation;
+    private String firstName;
+    private String lastName;
+    private String annotation;
     private int views;
+
+    public Post() {
+    }
+
+    public Post(String first_name, String last_name, String annotation) {
+        this.firstName = first_name;
+        lastName = last_name;
+        this.annotation = annotation;
+    }
 
     public Long getId() {
         return id;
@@ -23,19 +33,19 @@ public class Post {
     }
 
     public String getFirst_name() {
-        return first_name;
+        return firstName;
     }
 
     public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+        this.firstName = first_name;
     }
 
     public String getLast_name() {
-        return Last_name;
+        return lastName;
     }
 
     public void setLast_name(String last_name) {
-        Last_name = last_name;
+        this.lastName = last_name;
     }
 
     public String getAnnotation() {
@@ -54,12 +64,5 @@ public class Post {
         this.views = views;
     }
 
-    public Post() {
-    }
 
-    public Post(String first_name, String last_name, String annotation) {
-        this.first_name = first_name;
-        Last_name = last_name;
-        this.annotation = annotation;
-    }
 }
